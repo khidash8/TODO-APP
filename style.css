@@ -1,0 +1,42 @@
+body {
+  background: #fff5e4;
+  font-family: "poppins", sans-serif;
+}
+
+header {
+  min-height: 10vh;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+.form-section {
+  /* text-align: center; */
+  min-height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section input,
+.form-section i {
+  padding: 1rem;
+}
+.form-section input {
+  flex: 1 1 30rem;
+}
+
+.form-section i {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.form-section i:hover {
+  background: white;
+  color: black;
+}
