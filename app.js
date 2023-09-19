@@ -3,10 +3,12 @@ const plusButton = document.querySelector(".add-button");
 const todoUl = document.querySelector(".todo-ul");
 const todContainer = document.querySelector(".todo-container");
 const todoInput = document.querySelector("#todo-input");
+const filterTodo = document.querySelector(".form-selector");
 
 //? Event Listners
 plusButton.addEventListener("click", addElementsToDo);
 todoUl.addEventListener("click", deleteAndCheck);
+filterTodo.addEventListener("click", filterItems);
 
 //? Functions
 //* Create Elements
@@ -60,3 +62,30 @@ function deleteAndCheck(e) {
 }
 
 //* Select fuctionality
+function filterItems(e) {
+  // get all the nodes in the todo list
+  const todoNodes = todoUl.childNodes;
+  //loop through
+  todoNodes.forEach(function (todo) {
+    // switch through all the possibilities
+    switch (e.target.value) {
+      case "all":
+        todo.style.display = "flex";
+        break;
+      case "completed":
+        if (todo.classList.contains("completed")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+        break;
+      case "uncompleted":
+        if (!todo.classList.contains("completed")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+        break;
+    }
+  });
+}
