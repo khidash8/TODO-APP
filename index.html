@@ -19,6 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="shortcut icon" href="code-solid.svg" type="image/x-icon" />
     <!--? ---------------------------------------------------------------------------------------------STYLE-SHEET -->
     <link rel="stylesheet" href="style.css" />
     <title>Todo App Practice!</title>
@@ -31,10 +32,15 @@
     <!--? --------------------------------------------------------------------------------------------Form Section -->
     <div class="form-section">
       <form>
-        <input type="text" placeholder="TYPE HERE!" />
-        <i class="fa-regular fa-plus"></i>
+        <input type="text" placeholder="TYPE HERE!" id="todo-input" />
+        <button type="submit" class="add-button">
+          <i class="fa-regular fa-plus"></i>
+        </button>
       </form>
     </div>
+    <section class="todo-container">
+      <ul class="todo-ul"></ul>
+    </section>
     <!--? APP JAVASCRIPT -->
     <script src="app.js"></script>
   </body>

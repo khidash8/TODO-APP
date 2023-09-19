@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: #fff5e4;
   font-family: "poppins", sans-serif;
@@ -14,7 +20,6 @@ h1 {
 }
 
 .form-section {
-  /* text-align: center; */
   min-height: 10vh;
   display: flex;
   flex-wrap: wrap;
@@ -23,20 +28,79 @@ h1 {
 }
 
 .form-section input,
-.form-section i {
+.form-section button {
   padding: 1rem;
 }
-.form-section input {
-  flex: 1 1 30rem;
-}
 
-.form-section i {
+.form-section button {
   background: black;
   color: white;
   cursor: pointer;
+  border: none;
 }
 
-.form-section i:hover {
+.form-section button:hover {
   background: white;
   color: black;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: white;
+  color: black;
+  font-size: 2rem;
+  padding: 0.5rem;
+  margin: 0.2rem 0.2rem;
+  transition: all 0.5s ease;
+  background: #fff5e4;
+}
+
+.todo-li {
+  flex: 1;
+  min-height: 2rem;
+  font-size: large;
+  font-family: "poppins", sans-serif;
+  color: black;
+  border-radius: 5px;
+  border: 0.1px solid black;
+  padding: 0.3rem;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #ff6f47;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0 0.1rem;
+  border-radius: 5px;
+  border: none;
+}
+.complete-btn {
+  background-color: green;
+}
+.fas {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  background-color: green;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(18rem) rotateZ(30deg);
+  opacity: 0;
+}
+
+/*? Media Query */
+@media screen and (max-width: 500px) {
+  .todo-li {
+    width: 70%;
+  }
 }
